@@ -1,13 +1,13 @@
-package br.com.programadorjm.todolist_finalproject_santander_dio_bootcamp.room
+package br.com.programadorjm.todolist_finalproject_santander_dio_bootcamp.data.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Entity::class], version = 1)
+@Database(entities = [TaskEntity::class], version = 1)
 abstract class TaskDatabase:RoomDatabase() {
-    abstract fun dao():Dao
+    abstract fun dao():TaskDao
 
     companion object{
         private var INSTANCE:TaskDatabase? = null
