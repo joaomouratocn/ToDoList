@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ToDoList-FinalProject_Santander_DIO_Bootcamp</string>
+    <string name="str_to_do_list">To do List</string>
+    <string name="str_insert_task">Insert Task</string>
 </resources>
