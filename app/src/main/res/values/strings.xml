@@ -1,5 +1,17 @@
 <resources>
-    <string name="app_name">ToDoList-FinalProject_Santander_DIO_Bootcamp</string>
-    <string name="str_to_do_list">To do List</string>
+    <string name="app_name">Todo List</string>
     <string name="str_insert_task">Insert Task</string>
+    <string name="str_invalid_task_name">Invalid task name</string>
+    <string name="str_task_saved">Task saved</string>
+    <string name="str_save">Save</string>
+    <string name="str_invalid_object">Invalid object</string>
+    <string name="str_task_checked">Task checked</string>
+    <string name="str_task_deleted">Task deleted</string>
+    <string name="str_undo">Undo</string>
+    <string name="str_more_options">more_options</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_update_task">Update task</string>
+    <string name="str_new_task">New task</string>
+    <string name="str_task_is_checked">Task checked</string>
+    <string name="str_task_is_Unchecked">Task is unchecked</string>
 </resources>

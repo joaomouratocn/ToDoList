@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -13,8 +14,8 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
-                app:title="@string/str_to_do_list"/>
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="@string/app_name"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,45 +27,20 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/main_recycle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                tools:listitem="@layout/task_list_layout"/>
 
         </androidx.core.widget.NestedScrollView>
 
-
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:layout_width="match_parent"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_add_task"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_baseline_add_24"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="16dp"
-                    android:hint="@string/str_insert_task"
-                    android:singleLine="true"
-                    android:autofillHints="text"
-                    android:inputType="text"/>
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.01"
-                        app:icon="@drawable/ic_baseline_add_24"
-                        style="@style/Widget.App.Button.OutlinedButton.IconOnly"/>
-
-            </LinearLayout>
-
-        </com.google.android.material.bottomappbar.BottomAppBar>
+            android:contentDescription="@string/str_new_task"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

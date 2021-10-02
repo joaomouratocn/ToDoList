@@ -1,13 +1,15 @@
 package br.com.programadorjm.todolist_finalproject_santander_dio_bootcamp.data
 
+import androidx.lifecycle.LiveData
 import br.com.programadorjm.todolist_finalproject_santander_dio_bootcamp.data.model.TaskModel
 import br.com.programadorjm.todolist_finalproject_santander_dio_bootcamp.data.room.TaskEntity
-import kotlinx.coroutines.flow.Flow
 
 interface Repository {
-    fun getAllTask():Flow<List<TaskEntity>>
+    suspend fun getAllTask():List<TaskModel>
 
     suspend fun saveTask(taskModel: TaskModel)
+
+    suspend fun updateTask(taskModel: TaskModel)
 
     suspend fun deleteTask(taskModel: TaskModel)
 }
